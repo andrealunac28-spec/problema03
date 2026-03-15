@@ -1,6 +1,7 @@
 package ito.poo;
 
 public class Observacion {
+
     private String periodoDeUbicacion;
     private float latitudEnGrados;
     private String direccionDeLatitud;
@@ -8,8 +9,9 @@ public class Observacion {
     private String direccionDeLongitud;
     private float distanciaDeLaTierra;
 
-    public Observacion(String periodoDeUbicacion, float latitudEnGrados, String direccionDeLatitud,
-                       float longitudEnGrados, String direccionDeLongitud, float distanciaDeLaTierra) {
+    public Observacion(String periodoDeUbicacion, float latitudEnGrados,
+                       String direccionDeLatitud, float longitudEnGrados,
+                       String direccionDeLongitud, float distanciaDeLaTierra) {
 
         this.periodoDeUbicacion = periodoDeUbicacion;
         this.latitudEnGrados = latitudEnGrados;
@@ -17,6 +19,10 @@ public class Observacion {
         this.longitudEnGrados = longitudEnGrados;
         this.direccionDeLongitud = direccionDeLongitud;
         this.distanciaDeLaTierra = distanciaDeLaTierra;
+    }
+
+    public String getPeriodoDeUbicacion() {
+        return periodoDeUbicacion;
     }
 
     public float getLatitudEnGrados() {
@@ -35,22 +41,17 @@ public class Observacion {
         return direccionDeLongitud;
     }
 
-    public String getPeriodoDeUbicacion() {
-        return periodoDeUbicacion;
-    }
-
     public float getDistanciaDeLaTierra() {
         return distanciaDeLaTierra;
     }
 
     @Override
     public String toString() {
-        return "Observacion {" +
+        return "Observacion{" +
                 "periodo='" + periodoDeUbicacion + '\'' +
                 ", latitud=" + latitudEnGrados + "° " + direccionDeLatitud +
                 ", longitud=" + longitudEnGrados + "° " + direccionDeLongitud +
                 ", distancia=" + distanciaDeLaTierra +
                 '}';
     }
-
 }
